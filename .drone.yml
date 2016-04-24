@@ -1,5 +1,5 @@
 build:
-image: minimum2scp/sphinx
+  image: minimum2scp/sphinx
   commands:
     - sudo make html
 
