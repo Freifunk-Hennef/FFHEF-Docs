@@ -3,11 +3,12 @@ build:
   commands:
     - sudo make html
 
-publish:
-  sftp:
+deploy:
+  rsync:
+    user: www-data
     host: 10.10.0.186
     port: 22
-    username: www-data
-    destination_path: /var/www/docs.freifunk-hennef.de/
-    files: 
-      - build/html/*
+    source: build/html
+    target: /var/www/docs.freifunk-hennef.de/
+    delete: true
+    recursive: true
