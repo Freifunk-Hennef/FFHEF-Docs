@@ -1,19 +1,17 @@
-.. Freifunk Hennef Dokumentation documentation master file, created by
-   sphinx-quickstart on Sun Apr 24 18:52:21 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. Freifunk Hennef 
 
-Welcome to Freifunk Hennef Dokumentation's documentation!
-=========================================================
+Freifunk Hennef Dokumenation
+============================
 
-Contents:
+Inhalt:
 
 .. toctree::
    :maxdepth: 2
 
+   ip-adressen
 
 
-Indices and tables
+Inhaltsverzeichnis
 ==================
 
 * :ref:`genindex`

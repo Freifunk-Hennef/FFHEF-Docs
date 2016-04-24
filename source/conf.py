@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Freifunk Hennef Dokumentation documentation build configuration file, created by
+# Freifunk Hennef documentation build configuration file, created by
 # sphinx-quickstart on Sun Apr 24 18:52:21 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Freifunk Hennef Dokumentation'
+project = u'Freifunk Hennef'
 copyright = u'2016, Freifunk Hennef'
 author = u'Freifunk Hennef'
 
@@ -128,7 +128,7 @@ html_theme = 'sphinx_rtd_theme'
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
-#html_title = u'Freifunk Hennef Dokumentation v1.0'
+#html_title = u'Freifunk Hennef v1.0'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -198,7 +198,7 @@ html_static_path = ['_static']
 # Sphinx supports the following languages:
 #   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
 #   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr', 'zh'
-#html_search_language = 'en'
+html_search_language = 'de'
 
 # A dictionary with options for the search language support, empty by default.
 # 'ja' uses this config value.
@@ -210,7 +210,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'FreifunkHennefDokumentationdoc'
+htmlhelp_basename = 'FreifunkHennefdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -232,7 +232,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'FreifunkHennefDokumentation.tex', u'Freifunk Hennef Dokumentation Documentation',
+    (master_doc, 'FreifunkHennef.tex', u'Freifunk Hennef Dokumentation',
      u'Freifunk Hennef', 'manual'),
 ]
 
@@ -262,7 +262,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'freifunkhennefdokumentation', u'Freifunk Hennef Dokumentation Documentation',
+    (master_doc, 'freifunkhennef', u'Freifunk Hennef Dokumentation',
      [author], 1)
 ]
 
@@ -276,8 +276,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'FreifunkHennefDokumentation', u'Freifunk Hennef Dokumentation Documentation',
-     author, 'FreifunkHennefDokumentation', 'One line description of project.',
+    (master_doc, 'FreifunkHennef', u'Freifunk Hennef Dokumentation',
+     author, 'FreifunkHennef', 'One line description of project.',
      'Miscellaneous'),
 ]
 
