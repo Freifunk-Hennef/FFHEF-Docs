@@ -1,5 +1,5 @@
 build:
-  image: minimum2scp/sphinx
+image: minimum2scp/sphinx
   commands:
     - sudo make html
 
@@ -8,7 +8,7 @@ deploy:
     user: www-data
     host: 10.10.0.186
     port: 22
-    source: build/html
+    source: build/html/
     target: /var/www/docs.freifunk-hennef.de/
     delete: true
     recursive: true
