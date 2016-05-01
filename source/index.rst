@@ -1,4 +1,4 @@
-.. Freifunk Hennef 
+.. Freifunk Hennef
 
 Freifunk Hennef Dokumenation
 ============================
@@ -7,8 +7,21 @@ Inhalt:
 
 .. toctree::
    :maxdepth: 2
+   :caption: Infrastruktur
 
-   ip-adressen
+   server-ip-adressen
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Dienste
+
+   git-und-ci
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Anleitungen
+
+   dokumentation
 
 
 Inhaltsverzeichnis
@@ -17,4 +30,3 @@ Inhaltsverzeichnis
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
