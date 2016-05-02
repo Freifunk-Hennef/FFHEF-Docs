@@ -5,17 +5,20 @@ Server und IP-Adressen
    :desctable:
 
     nwdiag {
-      inet [shape = cloud];
-      inet -- srv03;
+      network Internet {
+          srv03 [ address = "176.9.38.45" ];
+          srv02 [ address = "37.221.194.208", description = "Netcup vServer" ];
+          srv01 [ address = "46.38.236.237", description = "Netcup vServer" ];
+      }
 
       network vmbr0 {
           address = "10.10.0.0/24";
 
           srv03 [ address = "10.10.0.1, 2a01:4f8:150:4426::2", description = "Virtual Machine Host bei Hetzner" ];
-          git01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?" ];
-          ci01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?" ];
-          concentrator01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?" ];
-          supernode01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?" ];
+          git01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?", description = "Gogs für git.freifunk-hennef.de"];
+          ci01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?", description = "Drone.io für ci.freifunk-hennef.de" ];
+          concentrator01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?", description = "Gateway zum FFRL" ];
+          supernode01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?", description = "Fastd Endpunkt" ];
       }
 
       network meshbr {
