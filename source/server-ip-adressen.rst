@@ -1,6 +1,29 @@
 Server und IP-Adressen
 ======================
 
+.. nwdiag::
+   :desctable:
+
+    nwdiag {
+      inet [shape = cloud];
+      inet -- srv03;
+
+      network vmbr0 {
+          address = "10.10.0.0/24";
+
+          srv03 [ address = "10.10.0.1, 2a01:4f8:150:4426::2", description = "Virtual Machine Host bei Hetzner" ];
+          git01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?" ];
+          ci01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?" ];
+          concentrator01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?" ];
+          supernode01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?" ];
+      }
+
+      network meshbr {
+          supernode01 [ address = "10.?.?.?, ?::?" ];
+      }
+
+    }
+
 Server
 ------
 
