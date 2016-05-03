@@ -15,6 +15,7 @@ Inhalt:
    :maxdepth: 2
    :caption: Dienste
 
+   webserver
    git-und-ci
 
 .. toctree::
