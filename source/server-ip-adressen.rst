@@ -1,31 +1,68 @@
 Server und IP-Adressen
 ======================
 
+Übersicht
+---------
+
 .. nwdiag::
    :desctable:
+   :align: left
 
     nwdiag {
       network Internet {
-          srv03 [ address = "176.9.38.45", description = "Virtual Machine Host bei Hetzner" ];
-          srv02 [ address = "37.221.194.208", description = "Netcup vServer" ];
           srv01 [ address = "46.38.236.237", description = "Netcup vServer" ];
+          srv02 [ address = "37.221.194.208", description = "Netcup vServer" ];
+          srv03 [ address = "176.9.38.45", description = "Virtual Machine Host bei Hetzner" ];
       }
 
       network vmbr0 {
           address = "10.10.0.0/24";
 
           srv03 [ address = "10.10.0.1, 2a01:4f8:150:4426::2" ];
-          git01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?", description = "Gogs für git.freifunk-hennef.de"];
-          ci01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?", description = "Drone.io für ci.freifunk-hennef.de" ];
-          concentrator01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?", description = "Gateway zum FFRL" ];
-          supernode01 [ address = "10.10.0.?, 2a01:4f8:150:4426::?", description = "Fastd Endpunkt" ];
+          gateway01 [ address = "10.10.0.10, ::1000:1000", description = "Gateway zum FFRL a" ];
+          gateway02 [ address = "10.10.0.11, ::1000:1001", description = "Gateway zum FFRL b" ];
+          supernode01 [ address = "10.10.0.20, ::1000:2000", description = "Fastd Endpunkt Port 53773" ];
+          supernode02 [ address = "10.10.0.21, ::1000:2001", description = "Fastd Endpunkt Port 10000" ];
+          web01 [ address = "10.10.0.50, ::1000:5000", description = "Webserver für statische Inhalte" ];
+          git01 [ address = "10.10.0.51, ::1000:5001", description = "Gogs für git.freifunk-hennef.de" ];
+          ci01 [ address = "10.10.0.52, ::1000:5002", description = "Drone.io für ci.freifunk-hennef.de" ];
       }
 
-      network meshbr {
-          supernode01 [ address = "10.?.?.?, ?::?" ];
+      network Mesh {
+          address = "10.186.0.0/16";
+          supernode01 [ address = "10.186.8.20" ];
+          supernode02 [ address = "10.186.8.21" ];
       }
 
     }
+
+Netze
+-----
+
++----------------+----------------------------+
+| Mesh IPv4      | 10.186.0.0/16              |
++----------------+----------------------------+
+| Mesh IPv6      | fda0:747e:ab29:7406::/64   |
++----------------+----------------------------+
+| VM Bridge IPv4 | 10.10.0.0/24               |
++----------------+----------------------------+
+
+IP-Adressbereiche
+-----------------
+
++-----------------------+------------------+------------------------+------------------+
+| Beschreibung          | IPv4 vmbr0       | Mesh IPv4              | Public/Mesh IPv6 |
++=======================+==================+========================+==================+
+| Gateways              | 10.10.0.10 - .19 |                        | ::1000:1000      |
++-----------------------+------------------+------------------------+------------------+
+| Supernodes            | 10.10.0.20 - .29 | 10.186.8.20 - .29      | ::1000:2000      |
++-----------------------+------------------+------------------------+------------------+
+| Services (öffentlich) | 10.10.0.30 - .49 | 10.186.8.30 - .49      | ::1000:3000      |
++-----------------------+------------------+------------------------+------------------+
+| Services (intern)     | 10.10.0.50 - .69 | 10.186.8.50 - .69      | ::1000:5000      |
++-----------------------+------------------+------------------------+------------------+
+| Clients               |                  | 10.186.16.1 - .143.254 | ?                |
++-----------------------+------------------+------------------------+------------------+
 
 Server
 ------

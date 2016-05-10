@@ -300,3 +300,8 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+
+nwdiag_html_image_format = "SVG"
+nwdiag_transparency = True
+nwdiag_antialias = True
+
