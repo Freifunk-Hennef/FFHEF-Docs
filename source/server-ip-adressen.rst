@@ -7,6 +7,7 @@ Server und IP-Adressen
 .. nwdiag::
    :desctable:
    :align: left
+   :scale: 50
 
     nwdiag {
       network Internet {
