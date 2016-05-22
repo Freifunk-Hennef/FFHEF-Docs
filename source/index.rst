@@ -23,6 +23,7 @@ Inhalt:
    :caption: Anleitungen
 
    dokumentation
+   images-bauen
 
 
 Inhaltsverzeichnis
