@@ -15,6 +15,7 @@ Inhalt:
    :maxdepth: 2
    :caption: Dienste
 
+   configuration-management
    webserver
    git-und-ci
 
