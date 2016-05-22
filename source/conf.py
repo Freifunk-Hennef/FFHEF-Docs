@@ -40,6 +40,7 @@ extensions = [
     'sphinxcontrib.nwdiag',
     'sphinxcontrib.rackdiag',
     'sphinxcontrib.packetdiag',
+    'sphinxcontrib.seqdiag',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -306,4 +307,8 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 nwdiag_html_image_format = "SVG"
 nwdiag_transparency = True
 nwdiag_antialias = True
+
+seqdiag_html_image_format = "SVG"
+seqdiag_antialias = True
+seqdiag_transparency = True
 
