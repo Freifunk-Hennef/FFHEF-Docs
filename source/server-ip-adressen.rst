@@ -141,8 +141,8 @@ srv04 supernode03.freifunk-hennef.de    53773  136.243.69.210 2a01:4f8:212:23d0:
 srv04 supernode04.freifunk-hennef.de    10000  136.243.69.210 2a01:4f8:212:23d0::1000:2003   10.186.8.23                10.186.40.0/20
 srv03 supernode05.freifunk-hennef.de    53773  176.9.38.59    2a01:4f8:150:4426::1000:2004   10.186.8.24                10.186.48.0/20                 ac677de34aa9bb3543a69966ceaa87c45837d59c2b5c4bae787b441df2d62ab3
 srv03 supernode06.freifunk-hennef.de    10000  176.9.38.59    2a01:4f8:150:4426::1000:2005   10.186.8.25                10.186.56.0/20                 feb629412cc0a4009abbed2347bf86f26d28c1925869ca636da9afee0ab058d9
-srv04 supernode07.freifunk-hennef.de    53773  136.243.69.210 2a01:4f8:212:23d0::1000:2006   10.186.8.26                10.186.64.0/20
-srv04 supernode08.freifunk-hennef.de    10000  136.243.69.210 2a01:4f8:212:23d0::1000:2007   10.186.8.27                10.186.72.0/20
+srv04 supernode07.freifunk-hennef.de    53773  136.243.69.250 2a01:4f8:212:23d0::1000:2006   10.186.8.26                10.186.64.0/20
+srv04 supernode08.freifunk-hennef.de    10000  136.243.69.250 2a01:4f8:212:23d0::1000:2007   10.186.8.27                10.186.72.0/20
 FFRL  0.wupper.ffrl.de                  53773  151.80.64.176  2001:41d0:c:95c::176           10.186.0.240               10.186.224.1 - 10.186.255.254
 FFRL  1.wupper.ffrl.de                  53773                                                10.186.0.241               "
 FFRL  2.wupper.ffrl.de                  53773                                                10.186.0.242               "
