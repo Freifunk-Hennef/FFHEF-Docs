@@ -59,7 +59,7 @@ Per ``/pfad/zu/sign.sh /wo/auch/immer/private_key experimental.manifest`` wird s
 Prüfen der Signatur
 +++++++++++++++++++
 
-Um sicherzugehen, dass die Signatur korrekt erfolgt ist, kann folgende Zeile verwendet werden. Der öffentliche Schlüssel muss hierbei im Klartext angegeben werden:
+Um sicherzugehen, dass die Signatur korrekt erfolgt ist, kann folgende Zeile verwendet werden. Der **öffentliche** Schlüssel muss hierbei im Klartext angegeben werden:
 
   ``/pfad/zu/sigtest.sh 7880319051562a(...)a2dc4f47328 experimental.manifest ; echo $?``
 
