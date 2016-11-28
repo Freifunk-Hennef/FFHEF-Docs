@@ -37,3 +37,10 @@ Funktionsweise und Einrichtung
     drone <-- deploy_job [label = "log output"];
   }
 
+Docker-Image für die CI
+-----------------------
+Zum Bauen der Images wird im Hintergrund ein Docker-Container benötigt.
+
+Bisher haben wir hierfür den Container `gluon-build <https://hub.docker.com/r/tobitheo/gluon-build/>`_ von `tobitheo <https://hub.docker.com/u/tobitheo/>`_ und, seit der v2016.2.1 von Gluon, den Container `gluon-build-docker <https://hub.docker.com/r/tobitheo/gluon-build-docker/>`_, da der alte Container hier nicht mehr funktioniert.
+
+Sollten die Tests mit `ffhef-gluonbuild <https://hub.docker.com/r/cbkffhef/ffhef-gluonbuild/>`_ erfolgreich sein, steht uns hier auch ein eigener Container zur Verfügung. Das - simple - Dockerfile findet sich in unserem `git <https://git.freifunk-hennef.de/Freifunk-Hennef/docker-buildimage>`_.
