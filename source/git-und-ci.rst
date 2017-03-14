@@ -38,7 +38,8 @@ Mit der Version 0.5 der Drone hat sich das Handling stark verändert, zudem habe
     drone <-- deploy_job [label = "log output"];
   }
 
-Wichtig zu wissen ist, dass das Einrichten (und die .drone.yml) nicht mehr ganz so intuitiv zu befüllen sind wie in vorherigen Versionen. Stolpersteine sind, u.a.: 
+Wichtig zu wissen ist, dass das Einrichten (und die .drone.yml) nicht mehr ganz so intuitiv zu befüllen sind wie in vorherigen Versionen. Stolpersteine sind, u.a.:
+
 * Build-Dauer 
 Nur ein Admin kann in den Einstellungen des Repositories in der UI der Drone die maximale Builddauer einstellen. Daher müssen die Adminaccount per Environment angegeben werden: ``DRONE_ADMIN=user,user,...`` 
 Dem Drone-Agent-Container muss beim Start per Environment ein weitaus größerer Inaktivitäts-Timeout mitgegeben werden: ``DRONE_TIMEOUT=180m``
