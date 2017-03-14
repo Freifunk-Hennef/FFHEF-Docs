@@ -9,7 +9,7 @@ pipeline:
     hosts: [ "10.10.0.186" ]
     user: www-data
     key: ${DEPLOYKEY}
-    source: /tmp/build/html/
+    source: build/html/
     target: /var/www/docs.freifunk-hennef.de/
     delete: false
     recursive: true
