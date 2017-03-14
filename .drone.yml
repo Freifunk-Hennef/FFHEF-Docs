@@ -3,12 +3,13 @@ pipeline:
     image: minimum2scp/sphinx
     commands:
       - sudo make html
+
   deploy:
     image: drillster/drone-rsync
-    user: www-data
     hosts: [ "10.10.0.186" ]
-    key: '${DEPLOYKEY}'
-    source: build/html/
+    user: www-data
+    key: ${DEPLOYKEY}
+    source: /tmp/build/html/
     target: /var/www/docs.freifunk-hennef.de/
     delete: false
     recursive: true
