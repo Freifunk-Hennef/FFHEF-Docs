@@ -58,7 +58,7 @@ Hier wird zusätzlich drone als CLI-Tool benötigt, das Binary kann unter `<http
 
 Zunächst werden wieder Environment-Variablen benötigt: ``export DRONE_SERVER=<url des servers>`` und ``export DRONE_TOKEN=<usertoken>``. Letzteres findet man in der Drone-UI unter "Account".
 
-Dann kann man den Key hinzufügen: ``./drone secret add Repo/sitory VARNAME @/pfad/zum/key --skip-verify --conceal``. Im Deployment-Schrit der .drone.yml wird dies dann mit ``key: ${VARNAME}`` referenziert.
+Dann kann man den Key hinzufügen: ``./drone secret add Repo/sitory VARNAME @/pfad/zum/key --skip-verify --conceal``. Im Deployment-Schritt der .drone.yml wird dies dann mit ``key: ${VARNAME}`` referenziert.
 
 Docker-Image für die CI
 -----------------------

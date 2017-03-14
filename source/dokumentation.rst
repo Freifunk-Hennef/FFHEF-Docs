@@ -5,7 +5,7 @@ Sphinx-Sourcen aus Git Repository auschecken/aktualisieren
 ----------------------------------------------------------
 
 Erstmalig auschecken
-  ``git clone https://git.freifunk-hennef.de/Freifunk-Hennef/ffhef-docs.git``
+  ``git clone https://github.com/Freifunk-Hennef/FFHEF-Docs.git``
 
 Aktualisieren
   Wenn man die Sourcen bereits früher ausgecheckt hat, in das Verzeichnis wechseln und das lokale Git Repository aktualisieren:
@@ -52,9 +52,9 @@ Dateien dem Git Commit hinzufügen
   Alle Dateien dem Commit hinzufügen: ``git add .``
 
 Commit durchführen
-  ``git commit -m "<ZUSAMMENFASSUNG DER ÄNDERUNG"``
+  ``git commit -m "<ZUSAMMENFASSUNG DER ÄNDERUNG>"``
 
 In Git Repository pushen
   ``git push``
 
-Kurze Zeit später sollte `<https://docs.freifunk-hennef.de>`_ aktualisiert sein. Die Ausgabe des serverseitigen Builds kann man im CI-System prüfen: `<https://ci.freifunk-hennef.de/Freifunk-Hennef/ffhef-docs>`_.
+Kurze Zeit später sollte `<https://docs.freifunk-hennef.de>`_ aktualisiert sein. Die Ausgabe des serverseitigen Builds kann man im CI-System prüfen: `<https://ci.freifunk-hennef.de/Freifunk-Hennef/FFHEF-Docs>`_.
