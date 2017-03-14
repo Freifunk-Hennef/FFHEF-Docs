@@ -42,16 +42,22 @@ Wichtig zu wissen ist, dass das Einrichten (und die .drone.yml) nicht mehr ganz 
 
 Build-Dauer 
 ^^^^^^^^^^^
-Nur ein Admin kann in den Einstellungen des Repositories in der UI der Drone die maximale Builddauer einstellen. Daher müssen die Adminaccount per Environment angegeben werden: ``DRONE_ADMIN=user,user,...``  
+Nur ein Admin kann in den Einstellungen des Repositories in der UI der Drone die maximale Builddauer einstellen. Daher müssen die Adminaccount per Environment angegeben werden: ``DRONE_ADMIN=user,user,...``
+
 Dem Drone-Agent-Container muss beim Start per Environment ein weitaus größerer Inaktivitäts-Timeout mitgegeben werden: ``DRONE_TIMEOUT=180m``
 
 Deployment 
 ^^^^^^^^^^
-Zuvor hat sich Drone selbst um die Deployment-Keys gekümmert. Dies ist nun nicht mehr der Fall. Somit müssen selbst Deployment-Keys erzeugt und dem Repository hinzugefügt werden.  
-Für den Deployment-User wird ein normaler SSH-Key erzeugt: ``sudo -u deployuser ssh-keygen``  
-Der pubkey wird in die authorized_keys geschrieben (``cat key.pub >> authorized_keys``), der private key auf den Server kopiert, wo Drone läuft.  
-Hier wird zusätzlich drone als CLI-Tool benötigt, das Binary kann unter `<http://readme.drone.io/usage/getting-started-cli/>`_ heruntergeladen werden.  
-Zunächst werden wieder Environment-Variablen benötigt: ``export DRONE_SERVER=<url des servers>`` und ``export DRONE_TOKEN=<usertoken>``. Letzteres findet man in der Drone-UI unter "Account".  
+Zuvor hat sich Drone selbst um die Deployment-Keys gekümmert. Dies ist nun nicht mehr der Fall. Somit müssen selbst Deployment-Keys erzeugt und dem Repository hinzugefügt werden.
+
+Für den Deployment-User wird ein normaler SSH-Key erzeugt: ``sudo -u deployuser ssh-keygen``
+
+Der pubkey wird in die authorized_keys geschrieben (``cat key.pub >> authorized_keys``), der private key auf den Server kopiert, wo Drone läuft.
+
+Hier wird zusätzlich drone als CLI-Tool benötigt, das Binary kann unter `<http://readme.drone.io/usage/getting-started-cli/>`_ heruntergeladen werden.
+
+Zunächst werden wieder Environment-Variablen benötigt: ``export DRONE_SERVER=<url des servers>`` und ``export DRONE_TOKEN=<usertoken>``. Letzteres findet man in der Drone-UI unter "Account".
+
 Dann kann man den Key hinzufügen: ``./drone secret add Repo/sitory VARNAME @/pfad/zum/key --skip-verify --conceal``. Im Deployment-Schrit der .drone.yml wird dies dann mit ``key: ${VARNAME}`` referenziert.
 
 Docker-Image für die CI
