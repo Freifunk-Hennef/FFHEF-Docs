@@ -3,9 +3,7 @@ pipeline:
     image: minimum2scp/sphinx
     commands:
       - sudo make html
-
-deploy:
-  rsync:
+  deploy:
     image: drillster/drone-rsync
     user: www-data
     hosts: [ "10.10.0.186" ]
